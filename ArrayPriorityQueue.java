@@ -1,11 +1,11 @@
-// SzechuanSauce
-// Marcus Ng, Thomas Lin, Ish Mahdi
-// HW #32: Getting Past the Velvet Rope
-// 2017-4-19
+// Pumpkin
+// Marcus Ng, Allan Wang, Joanna Zhou
+// APCS2 pd4
+// 2017-04-21
 
 import java.util.ArrayList;
 
-public class ArrayPriorityQueue<T> implements PriorityQueue<T> {
+public class ArrayPriorityQueue<T extends Comparable<T>> implements PriorityQueue<T> {
 
     private ArrayList<T> _data;
 
@@ -17,16 +17,16 @@ public class ArrayPriorityQueue<T> implements PriorityQueue<T> {
     // Enqueue value
     public void add(T x) {
 	// If arraylist is empty or x is the lowest new value
-	if (_data.isEmpty() || (Integer)x < (Integer)_data.get(_data.size() - 1)) {
+	if (_data.isEmpty() || x.compareTo(_data.get(_data.size() - 1)) < 0) {
 	    _data.add(x);
-	    return;
-	    
 	}
 	// If value is greater or equal to the value at index i, then add value current index
-	for (int i = 0; i < _data.size(); i++) {
-	    if ((Integer)x >= (Integer)_data.get(i)) {
-		_data.add(i, x);
-		return;
+	else{
+	    for (int i = 0; i < _data.size(); i++) {
+		if (x.compareTo(_data.get(i)) > -1) {
+		    _data.add(i, x);
+		    return;
+		}
 	    }
 	}
     }

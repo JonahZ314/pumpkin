@@ -1,5 +1,6 @@
 public class Ticket implements Comparable{
     private int vipLevel;
+    private ArrayList keywords;
     private String description;
     private String name;
     private boolean resolved;
@@ -29,4 +30,28 @@ public class Ticket implements Comparable{
 	    return 0;
 	}
     }
+    public int getVIP{
+	return vipLevel;
+    }
+    public String getDescrip{
+	return description;
+    }
+    public String getName{
+	return name;
+    }
+    public boolean getStatus{
+	return resolved;
+    }
+    public int getID{
+	return ID;
+    }
+    //add information to problem description
+    public void addInfo(String info){
+    }
+    public void addKeywords(String description){
+    }
+    public void changeStatus(boolean status){
+    }
+    
+    
 }

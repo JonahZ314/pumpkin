@@ -1,3 +1,11 @@
+// Pumpkin
+// Marcus Ng, Allan Wang, Joanna Zhou
+// APCS2 pd4
+// LAB03
+// 2017-04-21
+
+import java.util.ArrayList;
+
 public class Ticket implements Comparable {
     
     private int vipLevel;
@@ -5,19 +13,13 @@ public class Ticket implements Comparable {
     private String description;
     private String name;
     private boolean resolved;
-    private String solution;
     private int ID;
     
-    public Ticket() {
+    public Ticket(String name) {
 	vipLevel = 0;
-	ID = (int) System.currentTimeMillis();
-	resolved = false;
-    }
-    
-    public Ticket(int urgency, String prob, String yourName) {
-	vipLevel = urgency;
-	description = prob;
-	name = yourName;
+	keywords = new ArrayList<String>();
+	description = "";
+	name = "";
 	resolved = false;
 	ID = (int) System.currentTimeMillis();
     }
@@ -35,24 +37,29 @@ public class Ticket implements Comparable {
 	}
     }
     
-    public int getVIP {
+    public int getVIP() {
 	return vipLevel;
     }
     
-    public String getDesc {
+    public String getDesc() {
 	return description;
     }
     
-    public String getName {
+    public String getName() {
 	return name;
     }
     
-    public boolean getStatus {
+    public boolean getStatus() {
 	return resolved;
     }
     
-    public int getID {
+    public int getID() {
 	return ID;
+    }
+
+    // Set vipLevel
+    public void setVIP(int level) {
+	vipLevel = level;
     }
     
     //add information to problem description

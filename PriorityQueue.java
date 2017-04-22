@@ -1,7 +1,8 @@
-// SzechuanSauce
-// Marcus Ng, Thomas Lin, Ish Mahdi
-// HW #32: Getting Past the Velvet Rope
-// 2017-4-19
+// Pumpkin
+// Marcus Ng, Allan Wang, Joanna Zhou
+// APCS2 pd4
+// LAB03
+// 2017-04-21
 
 public interface PriorityQueue<T> {
 

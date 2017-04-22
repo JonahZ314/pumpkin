@@ -15,11 +15,11 @@ public class Ticket implements Comparable {
     private boolean resolved;
     private int ID;
     
-    public Ticket(String name) {
-	vipLevel = 0;
+    public Ticket(String newName, String desc, int level) {
+	vipLevel = level;
 	keywords = new ArrayList<String>();
-	description = "";
-	name = "";
+	description = desc;
+	name = newName;;
 	resolved = false;
 	ID = (int) System.currentTimeMillis();
     }

@@ -57,6 +57,7 @@ public class ArrayPriorityQueue<T extends Comparable<T>> implements PriorityQueu
     }
     
     public static void main(String[] args) {
+	
 	ArrayPriorityQueue<Integer> a = new ArrayPriorityQueue<Integer>();
 
 	System.out.println(a.isEmpty()); // true
@@ -84,7 +85,7 @@ public class ArrayPriorityQueue<T extends Comparable<T>> implements PriorityQueu
 	
 	System.out.println(a.peekMin()); // 3
 	System.out.println(a.removeMin()); // 3
-	System.out.println(a); // 5 4 3
+	System.out.println(a); // 5 4
 	
 	System.out.println(a.peekMin()); // 4
 	System.out.println(a.removeMin()); // 4
@@ -93,6 +94,9 @@ public class ArrayPriorityQueue<T extends Comparable<T>> implements PriorityQueu
 	System.out.println(a.peekMin()); // 5
 	System.out.println(a.removeMin()); // 5
 	System.out.println(a); //
+	
+
+	//ArrayPriorityQueue<Ticket> a = new ArrayPriorityQueue<Ticket>();
     }
     
 }

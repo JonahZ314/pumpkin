@@ -10,7 +10,8 @@ public class HelpDesk {
     }
 
     public static void main() {
-
+	// User creates a ticket
+	
     }
     
 }

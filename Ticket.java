@@ -1,4 +1,5 @@
-public class Ticket implements Comparable{
+public class Ticket implements Comparable {
+    
     private int vipLevel;
     private ArrayList keywords;
     private String description;
@@ -6,19 +7,22 @@ public class Ticket implements Comparable{
     private boolean resolved;
     private String solution;
     private int ID;
+    
     public Ticket() {
-	vipLevel = 10;
+	vipLevel = 0;
 	ID = (int) System.currentTimeMillis();
 	resolved = false;
     }
-    public Ticket(int urgency, String prob, String yourName){
+    
+    public Ticket(int urgency, String prob, String yourName) {
 	vipLevel = urgency;
 	description = prob;
 	name = yourName;
 	resolved = false;
 	ID = (int) System.currentTimeMillis();
     }
-    public int compareTo(Object hi){
+    
+    public int compareTo(Object hi) {
 	Ticket hey = (Ticket) hi;
 	if (this.vipLevel > hey.vipLevel) {
 	    return 1;
@@ -30,27 +34,40 @@ public class Ticket implements Comparable{
 	    return 0;
 	}
     }
-    public int getVIP{
+    
+    public int getVIP {
 	return vipLevel;
     }
-    public String getDescrip{
+    
+    public String getDesc {
 	return description;
     }
-    public String getName{
+    
+    public String getName {
 	return name;
     }
-    public boolean getStatus{
+    
+    public boolean getStatus {
 	return resolved;
     }
-    public int getID{
+    
+    public int getID {
 	return ID;
     }
+    
     //add information to problem description
-    public void addInfo(String info){
+    public void addInfo(String info) {
+	description += " " + info;
     }
+
+    // Parse through description for keywords
     public void addKeywords(String description){
+	
     }
-    public void changeStatus(boolean status){
+
+    // Change status
+    public void changeStatus() {
+	resolved = !resolved; 
     }
     
     

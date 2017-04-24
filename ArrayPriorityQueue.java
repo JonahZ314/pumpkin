@@ -6,7 +6,7 @@
 
 import java.util.ArrayList;
 
-public class ArrayPriorityQueue<T extends Comparable<T>> implements PriorityQueue<T> {
+public class ArrayPriorityQueue<T> implements PriorityQueue<T> {
 
     private ArrayList<T> _data;
 
@@ -18,13 +18,13 @@ public class ArrayPriorityQueue<T extends Comparable<T>> implements PriorityQueu
     // Enqueue value
     public void add(T x) {
 	// If arraylist is empty or x is the lowest new value
-	if (_data.isEmpty() || x.compareTo(_data.get(_data.size() - 1)) < 0) {
+	if (isEmpty() || ((Comparable)x).compareTo((Comparable)_data.get(_data.size() - 1)) < 0) {
 	    _data.add(x);
 	}
 	// If value is greater or equal to the value at index i, then add value current index
-	else{
+	else {
 	    for (int i = 0; i < _data.size(); i++) {
-		if (x.compareTo(_data.get(i)) > -1) {
+		if (((Comparable)x).compareTo((Comparable)_data.get(i)) > -1) {
 		    _data.add(i, x);
 		    return;
 		}
@@ -96,7 +96,7 @@ public class ArrayPriorityQueue<T extends Comparable<T>> implements PriorityQueu
 	System.out.println(a); //
 	
 
-	//ArrayPriorityQueue<Ticket> a = new ArrayPriorityQueue<Ticket>();
+	//ArrayPriorityQueue<Ticket> b = new ArrayPriorityQueue<Ticket>();
     }
     
 }

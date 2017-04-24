@@ -12,13 +12,6 @@ public class HelpDesk {
     private ArrayPriorityQueue<Ticket> tickets;
     private ArrayList<String> problemKeyWords;
     private ArrayList<String> solutions;
-
-    public HelpDesk() {
-	//tickets = new ArrayPriorityQueue<Ticket>();
-	problemKeyWords = new ArrayList<String>();
-	solutions = new ArrayList<String>();
-	// Add key words and solutions
-    }
     
     // Return a solution that contains the keyword
     public String giveSolution(String keyword) {
@@ -26,14 +19,14 @@ public class HelpDesk {
     }
 
     public static void main(String[] args) {
-	HelpDesk helpDesk = new HelpDesk();
+
 	// User creates a ticket
 	// Name
 	System.out.println("What is your name?");
 	String name = Keyboard.readWord();
 	
 	// VIP Level
-	System.out.println("How important are you, " + name + "? (Scale of 0 - 10)");
+	System.out.println("How important are you, " + name + "? Enter a number...(lower has higher priority)");
 	int vip = Keyboard.readInt();
 
 	// Problem
@@ -43,7 +36,7 @@ public class HelpDesk {
 
 	// Parse problem for keywords
 	//user.addKeywords();
-	
+
 	// Print solution
 	System.out.println("Try this: " + "-----");
     }

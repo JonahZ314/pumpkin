@@ -86,7 +86,7 @@ public class Ticket implements Comparable<Ticket> {
 
     // Parse through description for keywords
     public void addKeywords(String description){
-	String[] a = description.split(" ");
+	String[] a = description.split("[\\s]");
 	for (int i = 0; i < a.length; i++){
 	    if (a[i].equals("turn") ||
 		a[i].equals("slow") ||

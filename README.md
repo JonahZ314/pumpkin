@@ -4,7 +4,7 @@
 ### Our Design
 
 #### HelpDesk
-Our HelpDesk takes in user input and will return potential problem solutions based on keywords in the user's problem description(more info in ticket). It includes only one  method along with an ArrayPriorityQueue -
+The HelpDesk asks the user for his or her name, vip level, and problem. Our HelpDesk uses this information to create a ticket for the user and enqueues the ticket into the priority queue. The HelpDesk returns potential solutions based on keywords in the user's problem description (more info in ticket). If the user's problem is fixed, then his or her ticket is dequeued. If the user's problem is not fixed, then his or her ticket stays in the queue until a representative is available to help them and fix their problem. The HelpDesk includes only one method along with an ArrayPriorityQueue of Tickets -
 * giveSolution - Parses through collected keywords and returns a set of solutions for each keyword.
 * Tickets - An ArrayPriorityQueue of type Ticket.
 
